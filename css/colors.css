@@ -1,0 +1,14 @@
+:root {
+    --bg-color: #195a38;
+
+    --default-link-color: #ffffff;
+
+    --btn-text-color: #140f1e;
+    --btn-bg-signup-colr: #8bd65f;
+    --btn-bg-get-bonus-colr: #8bd65f;
+    --btn-bg-login-color: #D3D3D3;
+
+    --main-text-color: #ffffff;
+
+    --bg-footer: rgb(18, 18, 18);
+}

@@ -1,0 +1,384 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: var(--default-link-color);
+}
+
+p, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: var(--bg-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 50px;
+    color: var(--main-text-color);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    color: var(--main-text-color);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    color: var(--main-text-color);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.section-block {
+    margin-bottom: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.list {
+    margin: 24px 0;
+}
+
+.list li {
+    color: var(--main-text-color);
+    list-style: square;
+    margin-bottom: 4px;
+    padding: 4px 0;
+    font-size: 16px;
+}
+
+p {
+    line-height: 22px;
+    text-align: justify;
+    margin: 10px 0;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--main-text-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 15px 30px;
+    border: none;
+    color: var(--btn-text-color);
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+.btn:hover {
+    filter: brightness(85%);
+}
+
+.btn-signup {
+    background: var(--btn-bg-signup-colr);
+    margin-right: 5px;
+}
+
+.btn-login {
+    background: var(--btn-bg-login-color);
+}
+
+.btn-get-bonus {
+    background: var(--btn-bg-get-bonus-colr);
+}
+
+.logo {
+    width: 160px;
+}
+.logo img {
+    width: 50%;
+}
+
+.nav-header ul {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-header ul li a {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.side-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 0;
+    background: var(--bg-color);
+    overflow: hidden;
+    transition: width 0.4s;
+}
+
+.side-panel ul {
+    padding: 40px;
+}
+
+.side-panel li {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+.side-panel-open {
+    display: none;
+    border: none;
+    background: transparent;
+    color: var(--main-text-color);
+    font-size: 38px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.side-panel-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: transparent;
+    color: var(--main-text-color);
+    font-size: 38px;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-banner-content, .hero-banner-image {
+    flex: 1; /* Both elements take equal space */
+}
+
+.hero-banner-text {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.hero-banner-content {
+    padding: 30px 80px 30px 30px;
+    width: 350px;
+    background: rgba(29, 29, 29,.8);
+    border-radius: 5px;
+}
+
+
+.hero-banner-image {
+    flex: 1; 
+    max-width: 50%; 
+}
+
+.hero-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; 
+}
+
+.hero-banner-content, .hero-banner-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+
+.hero-banner-image img {
+    width: 130%;
+    max-width: 500px; 
+    height: auto;
+    display: block;
+}
+
+
+@media screen and (max-width: 768px) {
+    .hero-banner {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .hero-banner-content, .hero-banner-image {
+        max-width: 100%;
+    }
+    
+    .hero-banner-image img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.nav-list li {
+    width: 50%;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+footer {
+    background: var(--bg-footer);
+    margin-top: 60px;
+}
+
+.footer-content {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-footer {
+    margin-bottom: 20px;
+}
+
+.nav-footer ul {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-footer ul li a {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.banners-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.begambleaware-img {
+    width: 270px;
+    height: 80px;
+    max-width: 100%;
+}
+
+.gamcare-img {
+    width: 130px;
+    height: 80px;
+    max-width: 100%;
+}
+
+.footer-small {
+    font-size: 14px;
+    font-weight: 300;
+    color: #b8b8b8;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .nav-header {
+        display: none;
+    }
+    .nav-footer ul {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .side-panel-open {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        margin-bottom: 60px;
+    }
+    .btn-container {
+        display: flex;
+        position: absolute;
+        width: calc(100% - 40px);
+        top: 90px;
+    }
+    .btn-signup, .btn-login {
+        width: 100%;
+    }
+    .hero-banner-content {
+        padding: 40px;
+        width: 100%;
+        border-radius: 0;
+    }
+    .hero-banner {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav-list li {
+        width: 100%;
+    }
+}
